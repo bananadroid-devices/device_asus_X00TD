@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_X00TD.mk
+    $(LOCAL_DIR)/banana_X00TD.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_X00TD-userdebug
+    banana_X00TD-userdebug
 

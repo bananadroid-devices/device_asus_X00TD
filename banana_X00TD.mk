@@ -9,8 +9,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Havoc-OS stuff
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Inherit some common BananaDroid OS stuff
+$(call inherit-product, vendor/banana/config/common.mk)
+
+#Official Stuff
+BANANA_BUILD_TYPE := OFFICIAL
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.banana.maintainer=travarilo
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -19,7 +25,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := havoc_X00TD
+PRODUCT_NAME := banana_X00TD
 PRODUCT_DEVICE := X00TD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max Pro M1
