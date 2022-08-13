@@ -14,8 +14,7 @@ $(call inherit-product, vendor/banana/config/common.mk)
 
 #Official Stuff
 BANANA_BUILD_TYPE := OFFICIAL
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.banana.maintainer=travarilo
+BANANA_MAINTAINER := travarilo
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Bootanimation
